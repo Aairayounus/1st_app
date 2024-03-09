@@ -5,8 +5,6 @@ void main() {
   runApp(const MyApp());
 }
 
-//next time kuch b changing kro na app mein, usko github pe commit krke push krdiya kro
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
