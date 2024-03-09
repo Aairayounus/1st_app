@@ -40,7 +40,7 @@ class _Sign_upState extends State<Sign_up> {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
                 child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -63,7 +63,7 @@ class _Sign_upState extends State<Sign_up> {
               ),
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 70, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: TextFormField(
                   controller: firstnamecontroller,
                   decoration: InputDecoration(
@@ -73,18 +73,18 @@ class _Sign_upState extends State<Sign_up> {
                     filled: true,
                     focusedBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Color(0xffe4e7eb)),
-                      borderRadius: BorderRadius.circular(18),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(18),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 70,
+                  horizontal: 16,
                 ),
                 child: TextFormField(
                   controller: lastnamecontroller,
@@ -95,11 +95,11 @@ class _Sign_upState extends State<Sign_up> {
                     filled: true,
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(18),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(18),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                 ),
@@ -109,7 +109,7 @@ class _Sign_upState extends State<Sign_up> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 70,
+                  horizontal: 16,
                 ),
                 child: TextFormField(
                   controller: usernamecontroller,
@@ -120,11 +120,11 @@ class _Sign_upState extends State<Sign_up> {
                     filled: true,
                     focusedBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Color(0xffe4e7eb)),
-                      borderRadius: BorderRadius.circular(18),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(18),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                 ),
@@ -134,7 +134,7 @@ class _Sign_upState extends State<Sign_up> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 70,
+                  horizontal: 16,
                 ),
                 child: TextFormField(
                   controller: passwordnamecontroller,
@@ -145,11 +145,11 @@ class _Sign_upState extends State<Sign_up> {
                     filled: true,
                     focusedBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Color(0xffe4e7eb)),
-                      borderRadius: BorderRadius.circular(18),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(18),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                   obscureText: false,
@@ -195,16 +195,19 @@ class _Sign_upState extends State<Sign_up> {
                 child: Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.fromLTRB(65, 0, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(65, 0, 0, 0),
                       child: Text(
                         'Already have an account?',
                         style: CustomTextStyle.textStyle(),
                       ),
                     ),
+                    const SizedBox(width: 8),
                     InkWell(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Login()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Login()));
                       },
                       child: Text(
                         'Login',
